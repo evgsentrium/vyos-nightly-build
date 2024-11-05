@@ -1,0 +1,13 @@
+name: Amplify build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update_download_page:
+    uses: vyos/community.vyos.net/.github/workflows/main.yml@production
+    with:
+      branch: production
+    secrets:
+        AWS_AMPLIFY_ACCESS_KEY_ID: ${{ secrets.AWS_AMPLIFY_ACCESS_KEY_ID }}
+        AWS_AMPLIFY_SECRET_ACCESS_KEY: ${{ secrets.AWS_AMPLIFY_SECRET_ACCESS_KEY }}
