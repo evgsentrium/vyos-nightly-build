@@ -5,9 +5,9 @@ on:
 
 jobs:
   update_download_page:
-    uses: vyos/community.vyos.net/.github/workflows/main.yml@amplify
+    uses: vyos/community.vyos.net/.github/workflows/main.yml@main
     with:
-      branch: amplify
+      branch: main
       aws_amplify_region: ${{ vars.AWS_AMPLIFY_REGION }}
       aws_amplify_app_id: ${{ vars.AWS_AMPLIFY_APP_ID }}
     secrets:
